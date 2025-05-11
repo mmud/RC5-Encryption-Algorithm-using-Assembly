@@ -1,18 +1,18 @@
 <ASSEMBLER_INFO>
  <VERSION>2.2.8</VERSION>
  <DEVICE>"ATmega328P"</DEVICE>
- <WORKING_DIR>c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\Debug</WORKING_DIR>
+ <WORKING_DIR>C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\Debug</WORKING_DIR>
  <INCLUDE_PATH>
   <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
   <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
   <DIR></DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</SOURCE_FILE>
+ <SOURCE_FILE>C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
-  <FILE>c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\Debug\RC5 Encryption.obj</FILE>
+  <FILE>C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\Debug\RC5 Encryption.obj</FILE>
  </OBJECT_FILES>
  <HEX_FILES>
   <FILE>RC5 Encryption.hex</FILE>
@@ -22,9 +22,7 @@
   <FILE>RC5 Encryption.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <start><FILE>c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</FILE><LINE>426</LINE></start>
-  <I_RESET><FILE>c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</FILE><LINE>458</LINE></I_RESET>
-  <J_RESET><FILE>c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</FILE><LINE>468</LINE></J_RESET>
-  <end_f><FILE>c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</FILE><LINE>455</LINE></end_f>
+  <Main><FILE>C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</FILE><LINE>331</LINE></Main>
+  <end_f><FILE>C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm</FILE><LINE>379</LINE></end_f>
  </LABELS>
 </ASSEMBLER_INFO>

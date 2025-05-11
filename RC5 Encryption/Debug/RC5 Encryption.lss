@@ -1,28 +1,12 @@
 
-AVRASM ver. 2.2.8  c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm Mon Apr 21 14:33:22 2025
+AVRASM ver. 2.2.8  C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm Tue May 06 08:54:25 2025
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(4): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(34): warning: .def: 'AH' redefinition (r17->r17)
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(34): warning: Register r17 already defined by the .DEF directive
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(36): warning: .def: 'AL' redefinition (r16->r16)
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(36): warning: Register r16 already defined by the .DEF directive
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(38): warning: .def: 'BH' redefinition (r19->r19)
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(38): warning: Register r19 already defined by the .DEF directive
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(40): warning: .def: 'BL' redefinition (r18->r18)
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(40): warning: Register r18 already defined by the .DEF directive
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(446): macro 'INPUT' called here
+C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(1): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
-c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(4): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
+C:\Users\Lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.asm(1): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328Pdef.inc'
                                  
-                                 ;Mahmoud Shaban Amer (ndpro)
+                                 .include "m328Pdef.inc"
                                  
                                  ;***** Created: 2011-02-09 12:03 ******* Source: ATmega328P.xml **********
                                  ;*************************************************************************
@@ -1003,9 +987,6 @@ c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.as
                                  
                                  ; ***** END OF FILE ******************************************************
                                  
-                                 ;RC5 Encryption Project
-                                 
-                                 .include "m328Pdef.inc"
                                  
                                  ;***** Created: 2011-02-09 12:03 ******* Source: ATmega328P.xml **********
                                  ;*************************************************************************
@@ -1050,355 +1031,258 @@ c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.as
                                  
                                  ; ***** END OF FILE ******************************************************
                                  
-                                 ; Define Variables:
-                                 .EQU PL = 0xe1 
-                                 .EQU PH = 0xb7
-                                 .EQU QL = 0x37
-                                 .EQU QH = 0x9e
-                                 .EQU R = 8    
-                                 .EQU T = 18   
-                                 .EQU W = 16   
-                                 .EQU U = 2    
-                                 .EQU B = 12   
-                                 .EQU C = 6    
-                                 .EQU N = 54   
-                                 ; Memory locations for K[i]
-                                 .EQU BY0 = 0x0200
-                                 .EQU BY1 = 0x0201
-                                 .EQU BY2 = 0x0202
-                                 .EQU BY3 = 0x0203
-                                 .EQU BY4 = 0x0204
-                                 .EQU BY5 = 0x0205
-                                 .EQU BY6 = 0x0206
-                                 .EQU BY7 = 0x0207
-                                 .EQU BY8 = 0x0208
-                                 .EQU BY9 = 0x0209
-                                 .EQU BY10 = 0x020A
-                                 .EQU BY11 = 0x020B
+                                 .EQU ROUNDS =  8
+                                 .EQU DATA_SIZE = 0x01
+                                 .EQU DATA_IN = 0x0280
+                                 .EQU ENC_DATA = 0x0400
+                                 .EQU DEC_DATA = 0x0500
+                                 .EQU Ko = 0x0200
+                                 .EQU So = 0x0210
                                  
-                                 ; MACROs
-                                 .MACRO INPUT
-                                     .DEF AH = R17
-                                     ldi AH, high(@0)   
-                                     .DEF AL = R16
-                                     ldi AL, low(@0)    
-                                     .DEF BH = R19
-                                     ldi BH, high(@1)   
-                                     .DEF BL = R18
-                                     ldi BL, low(@1)    
-                                 .ENDMACRO
-                                 .MACRO SECRET_KEY
-                                         LDI R20, @11
-                                         STS BY0, R20
-                                         LDI R20, @10
-                                         STS BY1, R20
-                                         LDI R20, @9
-                                         STS BY2, R20
-                                         LDI R20, @8
-                                         STS BY3, R20
-                                         LDI R20, @7
-                                         STS BY4, R20
-                                         LDI R20, @6
-                                         STS BY5, R20
-                                         LDI R20, @5
-                                         STS BY6, R20
-                                         LDI R20, @4
-                                         STS BY7, R20
-                                         LDI R20, @3
-                                         STS BY8, R20
-                                         LDI R20, @2
-                                         STS BY9, R20
-                                         LDI R20, @1
-                                         STS BY10, R20
-                                         LDI R20, @0
-                                         STS BY11, R20
-                                 .ENDMACRO
-                                 .MACRO ROTL_WORD
-                                         TST @2
-                                         BREQ ZEROL
-                                         MOV R25, @2         
-                                     ROTL:
-                                         ROL @1
-                                         BST @0, 7
-                                         ROL @0
-                                         BLD @1, 0
-                                         DEC R25
-                                         BRNE ROTL
-                                     ZEROL:
-                                         nop
-                                 .ENDMACRO
-                                 .MACRO ROTR_WORD
-                                         TST @2
-                                         BREQ ZEROR
-                                         MOV R25, @2          
-                                     ROTR:
-                                         ROR @0
-                                         BST @1, 0
-                                         ROR @1
-                                         BLD @0, 7
-                                         DEC R25
-                                         BRNE ROTR
-                                     ZEROR:
-                                         nop
-                                 .ENDMACRO
-                                 .MACRO XOR_WORD            
-                                         EOR @1, @3
-                                         EOR @0, @2
-                                 .ENDMACRO
-                                 .MACRO SUB_WORD             
-                                         SUB @1, @3
-                                         SBC @0, @2
-                                 .ENDMACRO
-                                 .MACRO ADD_WORD            
-                                         ADD @1, @3
-                                         ADC @0, @2
-                                 .ENDMACRO
+                                 .macro ROTL 
+                                 	ROTL_LOOP:
+                                 		clc
+                                 		SBRC @0 , 7
+                                 		SEC
+                                 		ROL @1
+                                 		ROL @0
+                                 		DEC @2
+                                 		BRNE ROTL_LOOP
+                                 .endmacro
                                  
-                                 ;==============================================================================
-                                 ;*RC5_SETUP**********************************
-                                 ;==============================================================================
+                                 .macro ROTR
+                                 	ROTR_LOOP:
+                                 		clc
+                                 		SBRC @1 , 0
+                                 		SEC
+                                 		ROR @0
+                                 		ROR @1
+                                 		DEC @2
+                                 		BRNE ROTR_LOOP
+                                 .endmacro
                                  
-                                 .MACRO RC5_SETUP
+                                 .MACRO KEY_EXP
+                                 	ldi Zl , low(So)  ; Loading address of So in Z
+                                 	ldi Zh , high(So) 
+                                 	ldi r16 , low(0xB7E1) ; loading Pw in r17 r16 
+                                 	ldi r17 , high(0xB7E1)
+                                 	st  Z  , r16    ; Storing Pw as So 
+                                 	std  Z+1  , r17
+                                 	ldi r18, low(0x9E37)	; Qw in Registers  r19 r18 
+                                 	ldi r19, high(0x9E37)	
+                                 	ldi r20 , 17        ; number of iterations
+                                 	LOOP_K1 :
+                                 		ld r16 , Z+ ; loading S[i-1] in r17  r16
+                                 		ld r17 , Z+
+                                 		add r16 , r18 ; adding S[i-1] to Qw
+                                 		adc r17  , r19 
+                                 		st z , r16 ; Storing in the next location
+                                 		std z+1 , r17 
+                                 		dec r20
+                                 		brne LOOP_K1
+                                 	ldi Yl , LOW(Ko) ; Loading address of Ko in Y
+                                 	ldi Yh , HIGH(Ko)
+                                 	ldi Zl , low(So)  ; Loading address of So in Z
+                                 	ldi Zh , high(So)
+                                 	clr R0 ; A in R0 and R1
+                                 	clr R1
+                                 	clr R2 ; B in R2 and R3
+                                 	clr R3
+                                 	ldi R25 , 54
+                                 	LOOP_K2:
+                                 		add R0 , R2 ; A = A + B
+                                 		adc R1 , R3
+                                 		ld R4 , Z   ; Loading Si to R4,R5
+                                 		ldd R5 , Z+1
+                                 		add R0 , R4 ; A = Si + A
+                                 		adc R1 , R5
+                                 		ldi R22 , 3 ; Rotation Counter
+                                 		ROTL R0 , R1 , R22 ; Rotating A Left 3 times
+                                 		st Z , R0 ; Storing A in S[i]
+                                 		std Z+1 , R1 
+                                 		add R2 , R0 ; B = B + A
+                                 		adc R3 , R1
+                                 		mov R22, R2 ; Setting Rotation Counter
+                                 		andi R22,0x0F
+                                 		ld R4 , Y ; Loading L[i]
+                                 		ldd R5 , Y+1
+                                 		add R2 , R4 ; B = L[i] + B
+                                 		adc R3 , R5
+                                 		ROTL R2,R3,R22
+                                 		st Y , R2 ; Storing B in L[i]
+                                 		std Y+1 , R3
+                                 		;;;;; Checking if exceeding the S array (mod)
+                                 		I_RESET
+                                 		;;;;; Checking if exceeding the L array (mod)
+                                 		J_RESET
+                                  
+                                 		dec R25
+                                 		brne LOOP_K2
+                                 .ENDMACRO	
                                  
-                                 		;----------------------------------------------------------------
-                                         ; ----- Convert secret key (K[i]) to 6 words (L[i]) -------------
-                                 		;----------------------------------------------------------------
+                                 .MACRO ENCRYPTION
+                                 	ldi yl , LOW(DATA_IN) ; Pointer on the start of input data
+                                 	ldi yh , HIGH(DATA_IN) 
+                                 	ldi xl , LOW(ENC_DATA) ; Pointer on the Envrypted Data location
+                                 	ldi xh , HIGH(ENC_DATA)
+                                  	ldi R25 , DATA_SIZE 
+                                 DATA_ENCRY:
+                                 	ldi zl , LOW(So) ; Pointer on So
+                                 	ldi zh , HIGH(So)
+                                 	ld R16 , y+ ; Loading A in R16, R17
+                                 	ld R17 , y+ 
+                                 	ld R18 , y+ ; Loading B in R18 , R19
+                                 	ld R19 , y+
+                                 	ld R22 , z+ ; Loading S[0]
+                                 	ld R23 , z+
+                                 	add R16 , R22 ; A + S[0]
+                                 	adc R17 , R23 
+                                 	ld R22 , z+  ; Loading S[1]
+                                 	ld R23 , z+
+                                 	add R18 , R22 ; B + S[1]
+                                 	adc R19 , R23
+                                 	ldi R24 , ROUNDS ; Counter for encryption rounds
                                  
-                                        
-                                         ; Build L5:
-                                         lds  r0, BY11
-                                         lds  r1, BY10
-                                         sts  0x022A, r1     
-                                         sts  0x022B, r0 
-                                         ; Build L4:
-                                         lds  r0, BY9
-                                         lds  r1, BY8
-                                         sts  0x0228, r1
-                                         sts  0x0229, r0
-                                         ; Build L3:
-                                         lds  r0, BY7
-                                         lds  r1, BY6
-                                         sts  0x0226, r1
-                                         sts  0x0227, r0
-                                         ; Build L2:
-                                         lds  r0, BY5
-                                         lds  r1, BY4
-                                         sts  0x0224, r1
-                                         sts  0x0225, r0
-                                         ; Build L1:
-                                         lds  r0, BY3
-                                         lds  r1, BY2
-                                         sts  0x0222, r1
-                                         sts  0x0223, r0
-                                         ; Build L0:
-                                         lds  r0, BY1
-                                         lds  r1, BY0
-                                         sts  0x0220, r1
-                                         sts  0x0221, r0
-                                 		;----------------------------------------------------
-                                         ; ----- Step 2: Initialize expanded key table S[i] -----
-                                 		;----------------------------------------------------
-                                         .EQU S0L = 0x0210
-                                         .EQU S0H = 0x0211
-                                         .EQU S1L = 0x0212
-                                         .EQU S1H = 0x0213
-                                 
-                                         ldi ZL, low(S0L)
-                                         ldi ZH, high(S0L)
-                                 
-                                         ldi R21, PL
-                                         ldi R22, PH
-                                         STS S0L, R21
-                                         STS S0H, R22
-                                 
-                                         ldi R21, QL
-                                         ldi R22, QH
-                                         ldi R20, T
-                                         subi R20, 1
-                                     LOOP_S:
-                                         LD R23, Z+          ; get low byte from current S[i]
-                                         LD R24, Z+          ; get high byte from current S[i]
-                                         ADD_WORD R24, R23, R22, R21   ; S[i] + Qw
-                                         ST Z, R23           ; store result low byte
-                                         STD Z+1, R24        ; store result high byte
-                                         DEC R20
-                                         BRNE LOOP_S
-                                 		;------------------------------------------------------
-                                         ; ----- Step 3: Key Expansion (mixing in L array) -----
-                                 		;------------------------------------------------------
-                                         clr R0
-                                         clr R1
-                                         clr R2
-                                         clr R3
-                                         ldi ZL, low(S0L)
-                                         ldi ZH, high(S0L)
-                                         ldi YL, low(0x0220)   
-                                         ldi YH, high(0x0220)
-                                         ldi R20, N
-                                     LOOP_MIX:
-                                         ADD_WORD R1, R0, R3, R2
-                                         LD R23, Z
-                                         LDD R24, Z+1
-                                         ADD_WORD R1, R0, R24, R23
-                                         ldi R22, 3
-                                         ROTL_WORD R1, R0, R22
-                                         ST Z, R0
-                                         STD Z+1, R1
-                                         ADD_WORD R3, R2, R1, R0
-                                         mov R22, R2
-                                         andi R22, 0x0F
-                                         LD R23, Y
-                                         LDD R24, Y+1
-                                         ADD_WORD R3, R2, R24, R23
-                                         ROTL_WORD R3, R2, R22
-                                         ST Y, R2
-                                         STD Y+1, R3
-                                         RCALL I_RESET
-                                         RCALL J_RESET
-                                         DEC R20
-                                         BRNE LOOP_MIX
+                                 ENCRYPTION_ROUND : 
+                                 	EOR R16 , R18 ; A XOR B
+                                 	EOR R17 , R19
+                                 	MOV R20 , R18 ; Taking the lowest 4 bits of B  as the counter
+                                 	ANDI R20 , 0x0F
+                                 	ROTL R16 , R17 , R20 
+                                 	ld R22 , z+ ; Loading S[2i]
+                                 	ld R23 , z+
+                                 	add R16 ,R22 ; A = A + S[2i] 
+                                 	adc R17 , R23
+                                 	;;;
+                                 	EOR R18 , R16 ; B XOR A
+                                 	EOR R19 , R17
+                                 	MOV R20 , R16 ; Taking the lowest 4 bits of A  as the counter
+                                 	ANDI R20 , 0x0F
+                                 	ROTL R18 , R19 , R20
+                                 	ld R22 , z+ ; Loading S[2i + 1]
+                                 	ld R23 , z+
+                                 	add R18 , R22 ; B = B + S[2i + 1]
+                                 	adc R19 , R23
+                                 	dec R24 ; Decrementing the branch rounds counter
+                                 	brne ENCRYPTION_ROUND
+                                 	st  x+ , R16 
+                                 	st  x+ , R17 
+                                 	st  x+ , R18 
+                                 	st  x+ , R19 
+                                 	dec R25 ; Decrementing the input data size counter
+                                 	brne DATA_ENCRY
                                  .ENDMACRO
                                  
-                                 ;==============================================================================
-                                 ;RC5_ENCRYPT*********************************
-                                 ;==============================================================================
+                                 .MACRO DECRYPTION
+                                 	ldi xl , LOW(ENC_DATA)
+                                 	ldi xh , HIGH(ENC_DATA)
+                                 	ldi yl , LOW(DEC_DATA) ; Pointer on the start of input data
+                                 	ldi yh , HIGH(DEC_DATA) 
+                                  	ldi R25 , DATA_SIZE 
                                  
-                                 .MACRO RC5_ENCRYPT
-                                         LDI XL, 0x14
-                                         LDI XH, 0x02
-                                         LDS R22, S0L
-                                         LDS R21, S0H
-                                         ADD_WORD AH, AL, R21, R22
-                                         LDS R22, S1L
-                                         LDS R21, S1H
-                                         ADD_WORD BH, BL, R21, R22
-                                         LDI R20, R
-                                     LOOP_E:
-                                         LDI R22, 0x0F
-                                         AND R22, BL  ;%16
-                                         LD R23, X+
-                                         LD R24, X+
-                                         XOR_WORD AH, AL, BH, BL
-                                         ROTL_WORD AH, AL, R22
-                                         ADD_WORD AH, AL, R24, R23
-                                         LDI R22, 0x0F
-                                         AND R22, AL  ;%16
-                                         LD R23, X+
-                                         LD R24, X+
-                                         XOR_WORD BH, BL, AH, AL
-                                         ROTL_WORD BH, BL, R22
-                                         ADD_WORD BH, BL, R24, R23
-                                         DEC R20
-                                         BRNE LOOP_E
+                                 DATA_DECRY:
+                                 	ldi zl , LOW(0x234) ; Last location of S array
+                                 	ldi zh , HIGH(0x234).
+                                 	ldi R24 , ROUNDS ; Counter for Decryption rounds
+                                 	ld R16 , x+ ;Loading A from Encrypted Data
+                                 	ld R17 , x+
+                                 	ld R18 , x+	 ;Loading B from Envrypted Data
+                                  	ld R19 , x+
+                                 DECRYPTION_ROUND : 
+                                 	ld R23 , -z  ;Loading needed S 
+                                 	ld R22 , -z 
+                                 	sub R18, R22 ; B = B - S
+                                 	sbc R19 , R23 
+                                 	MOV R20, R16 ; Taking A lowest 4 bits as a rotation counter
+                                 	ANDI R20 , 0x0F
+                                 	ROTR R18 , R19 , R20
+                                 	EOR R18 , R16 ; B XOR A
+                                 	EOR R19 , R17
+                                 	;;;
+                                 	ld R23 , -z  ;Loading needed S 
+                                 	ld R22 , -z 
+                                 	sub R16  , R22 ; A = A - S
+                                 	sbc R17 ,  R23
+                                 	MOV R20, R18 ; Taking A lowest 4 bits as a rotation counter
+                                 	ANDI R20 , 0x0F
+                                 	ROTR R16 , R17 , R20
+                                 	EOR R16 , R18 ; A XOR B
+                                 	EOR R17 , R19
+                                 	dec R24
+                                 	brne DECRYPTION_ROUND 
+                                 	ld R23 , -z  ;Loading needed S 
+                                 	ld R22 , -z 
+                                 	sub R18, R22 ; B = B - S
+                                 	sbc R19 , R23 
+                                 	ld R23 , -z  ;Loading needed S 
+                                 	ld R22 , -z
+                                 	sub R16  , R22 ; A = A - S
+                                 	sbc R17 ,  R23
+                                 	st  y+ , R16 
+                                 	st  y+ , R17 
+                                 	st  y+ , R18 
+                                 	st  y+ , R19
+                                 	dec R25
+                                 	brne DATA_DECRY
+                                 .ENDMACRO 
+                                 
+                                 .MACRO I_RESET
+                                     inc  zl          ; Increment low byte twice (16-bit values)
+                                     inc  zl
+                                     ldi  r20, 0x34   ; Last location of S array (0x234)
+                                     cpse zl, r20     ; Compare low bytes
+                                     rjmp i_reset_cont ; Jump to continuation if not at end
+                                     ldi  zl, LOW(So) ; Reset to start of S array (0x210)
+                                 i_reset_cont:        ; Continue execution here
                                  .ENDMACRO
                                  
-                                 ;==============================================================================
-                                 ;*RC5_DECRYPT**********************************
-                                 ;==============================================================================
-                                 
-                                 .MACRO RC5_DECRYPT
-                                         LDI XL, 0x34
-                                         LDI XH, 0x02
-                                         LDI R20, 8
-                                     LOOP_D:
-                                         LDI R22, 0x0F
-                                         AND R22, AL
-                                         LD R23, -X
-                                         LD R24, -X
-                                         SUB_WORD BH, BL, R23, R24
-                                         ROTR_WORD BH, BL, R22
-                                         XOR_WORD BH, BL, AH, AL
-                                         LDI R22, 0x0F
-                                         AND R22, BL
-                                         LD R23, -X
-                                         LD R24, -X
-                                         SUB_WORD AH, AL, R23, R24
-                                         ROTR_WORD AH, AL, R22
-                                         XOR_WORD AH, AL, BH, BL
-                                         DEC R20
-                                         BRNE LOOP_D
-                                         LDS R22, S0H
-                                         LDS R21, S0L
-                                         SUB_WORD AH, AL, R22, R21
-                                         LDS R22, S1H
-                                         LDS R21, S1L
-                                         SUB_WORD BH, BL, R22, R21
+                                 .MACRO J_RESET
+                                     inc  yl          ; Increment low byte twice (16-bit values)
+                                     inc  yl
+                                     ldi  r20, 0x0C   ; Last location of L array (0x20C)
+                                     cpse yl, r20     ; Compare low bytes
+                                     rjmp j_reset_cont ; Jump to continuation if not at end
+                                     clr  yl          ; Reset to start of L array (0x200)
+                                 j_reset_cont:        ; Continue execution here
                                  .ENDMACRO
                                  
-                                 
-                                 
-                                 ;==============================================================================
-                                 ;*LCD_Writer***********************************
-                                 ;==============================================================================
-                                 
-                                 
-                                 
-                                 .MACRO LCD
-                                 
-                                 ;================================================================
+                                 .MACRO lcd
                                  LCD_write_2:
                                        LDI   R25, 0xFF
-                                       OUT   DDRD, R25         ;set port D o/p for data
-                                       OUT   DDRB, R25         ;set port B o/p for command
-                                       CBI   PORTB, 0          ;EN = 0
-                                       RCALL delay_ms_2        ;wait for LCD power on
-                                       ;-----------------------------------------------------
-                                       RCALL LCD_init_2        ;subroutine to initialize LCD
-                                       ;-----------------------------------------------------
-                                       RCALL disp_message_2    ;subroutine to display message (only once)
-                                       
-                                       ; End of program - infinite loop to stop execution
+                                       OUT   DDRD, R25         
+                                       OUT   DDRB, R25         
+                                       CBI   PORTB, 0         
+                                       RCALL delay_ms_2        
+                                       RCALL LCD_init_2     
+                                       RCALL disp_message_2    
                                  end_2:  RJMP  end_dis
-                                 ;================================================================
                                  LCD_init_2:
-                                       LDI   R25, 0x33         ;init LCD for 4-bit data
+                                       LDI   R25, 0x33         
                                        RCALL command_wrt_2       
                                        RCALL delay_ms_2
                                        LDI   R25, 0x32         
                                        RCALL command_wrt_2
                                        RCALL delay_ms_2
-                                       LDI   R25, 0x28         ;LCD 2 lines, 5x7 matrix
+                                       LDI   R25, 0x28        
                                        RCALL command_wrt_2
                                        RCALL delay_ms_2
-                                       LDI   R25, 0x0C         ;disp ON, cursor OFF
+                                       LDI   R25, 0x0C         
                                        RCALL command_wrt_2
-                                       LDI   R25, 0x01         ;clear LCD
+                                       LDI   R25, 0x01         
                                        RCALL command_wrt_2
                                        RCALL delay_ms_2
-                                       LDI   R25, 0x06         ;shift cursor right
+                                       LDI   R25, 0x06         
                                        RCALL command_wrt_2
                                        RET  
-                                 ;================================================================
                                  command_wrt_2:
-                                       MOV   R30, R25          ;use R30 instead of R27
-                                       ANDI  R30, 0xF0         ;mask low nibble & keep high nibble
-                                       OUT   PORTD, R30        ;o/p high nibble to port D
-                                       CBI   PORTB, 1          ;RS = 0 for command
-                                       SBI   PORTB, 0          ;EN = 1
-                                       RCALL delay_short_2       
-                                       CBI   PORTB, 0          ;EN = 0
-                                       RCALL delay_us_2          
-                                       ;----------------------------------------------------
                                        MOV   R30, R25          
-                                       SWAP  R30               ;swap nibbles
                                        ANDI  R30, 0xF0         
                                        OUT   PORTD, R30        
+                                       CBI   PORTB, 1          
                                        SBI   PORTB, 0          
                                        RCALL delay_short_2       
                                        CBI   PORTB, 0          
                                        RCALL delay_us_2          
-                                       RET
-                                 ;================================================================
-                                 data_wrt_2:
-                                       MOV   R30, R25          ;use R30 instead of R27
-                                       ANDI  R30, 0xF0         
-                                       OUT   PORTD, R30        
-                                       SBI   PORTB, 1          ;RS = 1 for data
-                                       SBI   PORTB, 0          ;EN = 1
-                                       RCALL delay_short_2       
-                                       CBI   PORTB, 0          
-                                       RCALL delay_us_2          
-                                       ;----------------------------------------------------
                                        MOV   R30, R25          
                                        SWAP  R30               
                                        ANDI  R30, 0xF0         
@@ -1408,50 +1292,62 @@ c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.as
                                        CBI   PORTB, 0          
                                        RCALL delay_us_2          
                                        RET
-                                 ;================================================================
+                                 data_wrt_2:
+                                       MOV   R30, R25          
+                                       ANDI  R30, 0xF0         
+                                       OUT   PORTD, R30        
+                                       SBI   PORTB, 1          
+                                       SBI   PORTB, 0         
+                                       RCALL delay_short_2       
+                                       CBI   PORTB, 0          
+                                       RCALL delay_us_2          
+                                       MOV   R30, R25          
+                                       SWAP  R30               
+                                       ANDI  R30, 0xF0         
+                                       OUT   PORTD, R30        
+                                       SBI   PORTB, 0          
+                                       RCALL delay_short_2       
+                                       CBI   PORTB, 0          
+                                       RCALL delay_us_2          
+                                       RET
                                  disp_message_2:
-                                       MOV   R25, R17          ;display characters via R25
-                                       RCALL data_wrt_2          
-                                       RCALL delay_seconds_2	  
-                                 	  MOV   R25, R16          ;display characters via R25
-                                       RCALL data_wrt_2          
-                                       RCALL delay_seconds_2  
-                                 	  MOV   R25, R19          ;display characters via R25
+                                       MOV   R25, R17          
                                        RCALL data_wrt_2          
                                        RCALL delay_seconds_2
-                                 	  MOV   R25, R18          ;display characters via R25
+                                 	  MOV   R25, R16          
+                                       RCALL data_wrt_2          
+                                       RCALL delay_seconds_2
+                                 	  MOV   R25, R19         
+                                       RCALL data_wrt_2          
+                                       RCALL delay_seconds_2
+                                 	  MOV   R25, R18         
                                        RCALL data_wrt_2          
                                        RCALL delay_seconds_2     
-                                       ;----------------
-                                       LDI   R28, 12           ;wait 3 seconds (using R28)
+                                       LDI   R28, 12           
                                  l2_2:   RCALL delay_seconds_2
                                        DEC   R28
                                        BRNE  l2_2
                                        RET
-                                 ;================================================================
                                  delay_short_2:
                                        NOP
                                        NOP
                                        RET
-                                 ;------------------------
                                  delay_us_2:
-                                       LDI   R20, 90           ;allowed register
+                                       LDI   R20, 90           
                                  l3_2:   RCALL delay_short_2
                                        DEC   R20
                                        BRNE  l3_2
                                        RET
-                                 ;-----------------------
                                  delay_ms_2:
-                                       LDI   R29, 40           ;using R29
+                                       LDI   R29, 40           
                                  l4_2:   RCALL delay_us_2
                                        DEC   R29
                                        BRNE  l4_2
                                        RET
-                                 ;================================================================
                                  delay_seconds_2:        
-                                     LDI   R20, 255            ;outer loop (allowed)
-                                 l5_2: LDI   R29, 255            ;mid loop (R29)
-                                 l6_2: LDI   R30, 20             ;inner loop (R30)
+                                     LDI   R20, 255           
+                                 l5_2: LDI   R29, 255            
+                                 l6_2: LDI   R30, 20            
                                  l7_2: DEC   R30         
                                      BRNE  l7_2          
                                      DEC   R29         
@@ -1459,974 +1355,541 @@ c:\users\lenovo\Documents\Atmel Studio\7.0\RC5 Encryption\RC5 Encryption\main.as
                                      DEC   R20         
                                      BRNE  l5_2          
                                      RET               
-                                 ;----------------------------------------------------------------
                                  end_dis:
                                  nop
-                                 .ENDMACRO
+                                 .ENDMACRO		
+                                 
+                                 Main:
+000000 e40d                      	ldi r16,0x4D
+000001 9300 0200                 	sts 0x0200, r16
+000003 e601                      	ldi r16,0x61
+000004 9300 0201                 	sts 0x0201, r16
+000006 e608                      	ldi r16,0x68
+000007 9300 0202                 	sts 0x0202, r16
+000009 e60d                      	ldi r16,0x6D
+00000a 9300 0203                 	sts 0x0203, r16
+00000c e60f                      	ldi r16,0x6F
+00000d 9300 0204                 	sts 0x0204, r16
+00000f e705                      	ldi r16,0x75
+000010 9300 0205                 	sts 0x0205, r16
+000012 e604                      	ldi r16,0x64
+000013 9300 0206                 	sts 0x0206, r16
+000015 e503                      	ldi r16,0x53
+000016 9300 0207                 	sts 0x0207, r16
+000018 e608                      	ldi r16,0x68
+000019 9300 0208                 	sts 0x0208, r16
+00001b e601                      	ldi r16,0x61
+00001c 9300 0209                 	sts 0x0209, r16
+00001e e602                      	ldi r16,0x62
+00001f 9300 020a                 	sts 0x020A, r16
+000021 e60e                      	ldi r16,0x6E
+000022 9300 020b                 	sts 0x020B, r16
+                                 
+                                 		; Test Case "AHMD" (0x4148 and 0x4D44)
+000024 e408                      	ldi r16, 0x48  ; 'H'
+000025 9300 0280                 	sts 0x0280, r16
+000027 e401                      	ldi r16, 0x41  ; 'A'
+000028 9300 0281                 	sts 0x0281, r16
+00002a e404                      	ldi r16, 0x44  ; 'D'
+00002b 9300 0282                 	sts 0x0282, r16
+00002d e40d                      	ldi r16, 0x4D  ; 'M'
+00002e 9300 0283                 	sts 0x0283, r16
+                                 
+000030 9100 0280                 	lds R16, 0x0280  ; Load 'A' (0x41)
+000032 9110 0281                 	lds R17, 0x0281 ; Load 'H' (0x48)
+000034 9120 0282                 	lds R18, 0x0282  ; Load 'M' (0x4D)
+000036 9130 0283                 	lds R19, 0x0283  ; Load 'D' (0x44)
                                  
                                  
-                                 
-                                 ;=======================================================================
-                                 ;*TEST**********************************
-                                 ;=======================================================================
-                                 
-                                 start:
-000000 e048                      	ldi r20, high(RAMEND)
-000001 bf4e                      	out SPH, r20
-000002 ef4f                      	ldi r20, low(RAMEND)
-000003 bf4d                      	out SPL, r20
-                                 
-000004 e64e
-000005 9340 0200
-000007 e642
-000008 9340 0201
-00000a e641
-00000b 9340 0202
-00000d e648
-00000e 9340 0203
-000010 e543
-000011 9340 0204
-000013 e644
-000014 9340 0205
-000016 e745
-000017 9340 0206
-000019 e64f
-00001a 9340 0207
-00001c e64d
-00001d 9340 0208
-00001f e648
-000020 9340 0209
-000022 e641
-000023 9340 020a
-000025 e44d
-000026 9340 020b                     SECRET_KEY 0x4D,0x61,0x68,0x6D,0x6F,0x75,0x64,0x53,0x68,0x61,0x62,0x6E
-000028 9000 020b
-00002a 9010 020a
-00002c 9210 022a
-00002e 9200 022b
-000030 9000 0209
-000032 9010 0208
-000034 9210 0228
-000036 9200 0229
-000038 9000 0207
-00003a 9010 0206
-00003c 9210 0226
-00003e 9200 0227
-000040 9000 0205
-000042 9010 0204
-000044 9210 0224
-000046 9200 0225
-000048 9000 0203
-00004a 9010 0202
-00004c 9210 0222
-00004e 9200 0223
-000050 9000 0201
-000052 9010 0200
-000054 9210 0220
-000056 9200 0221
-000058 e1e0
-000059 e0f2
-00005a ee51
-00005b eb67
-00005c 9350 0210
-00005e 9360 0211
-000060 e357
-000061 e96e
-000062 e142
-000063 5041
-000064 9171
-000065 9181
-000066 0f75
-000067 1f86
-000068 8370
-000069 8381
-00006a 954a
-00006b f7c1
-00006c 2400
-00006d 2411
-00006e 2422
-00006f 2433
-000070 e1e0
-000071 e0f2
-000072 e2c0
-000073 e0d2
-000074 e346
-000075 0c02
-000076 1c13
-000077 8170
-000078 8181
-000079 0e07
-00007a 1e18
-00007b e063
-00007c 2366
-00007d f039
-00007e 2f96
-00007f 1c00
-000080 fa17
-000081 1c11
-000082 f800
-000083 959a
-000084 f7d1
+000038 ef9f
+000039 b99a
+00003a b994
+00003b 9828
+00003c d04f
+00003d d002
+00003e d034
+00003f c05b
+000040 e393
+000041 d00f
+000042 d049
+000043 e392
+000044 d00c
+000045 d046
+000046 e298
+000047 d009
+000048 d043
+000049 e09c
+00004a d006
+00004b e091
+00004c d004
+00004d d03e
+00004e e096
+00004f d001
+000050 9508
+000051 2fe9
+000052 7fe0
+000053 b9eb
+000054 9829
+000055 9a28
+000056 d02d
+000057 9828
+000058 d02e
+000059 2fe9
+00005a 95e2
+00005b 7fe0
+00005c b9eb
+00005d 9a28
+00005e d025
+00005f 9828
+000060 d026
+000061 9508
+000062 2fe9
+000063 7fe0
+000064 b9eb
+000065 9a29
+000066 9a28
+000067 d01c
+000068 9828
+000069 d01d
+00006a 2fe9
+00006b 95e2
+00006c 7fe0
+00006d b9eb
+00006e 9a28
+00006f d014
+000070 9828
+000071 d015
+000072 9508
+000073 2f91
+000074 dfed
+000075 d01b
+000076 2f90
+000077 dfea
+000078 d018
+000079 2f93
+00007a dfe7
+00007b d015
+00007c 2f92
+00007d dfe4
+00007e d012
+00007f e0cc
+000080 d010
+000081 95ca
+000082 f7e9
+000083 9508
+000084 0000
 000085 0000
-000086 8200
-000087 8211
-000088 0c20
-000089 1c31
-00008a 2d62
-00008b 706f
-00008c 8178
-00008d 8189
-00008e 0e27
-00008f 1e38
-000090 2366
-000091 f039
-000092 2f96
-000093 1c22
-000094 fa37
-000095 1c33
-000096 f820
-000097 959a
-000098 f7d1
-000099 0000
-00009a 8228
-00009b 8239
-00009c d338
-00009d d33e
-00009e 954a
-00009f f6a9                          RC5_SETUP
-                                 
-                                 	; Test case: "NDPR" as 0x4E44 and 0x5052
-0000a0 e41e
-0000a1 e404
-0000a2 e530
-0000a3 e522                      	INPUT 0x4E44, 0x5052
-0000a4 ef9f
-0000a5 b99a
-0000a6 b994
-0000a7 9828
-0000a8 d04f
-0000a9 d002
-0000aa d034
-0000ab c05b
-0000ac e393
-0000ad d00f
-0000ae d049
-0000af e392
-0000b0 d00c
-0000b1 d046
-0000b2 e298
-0000b3 d009
-0000b4 d043
-0000b5 e09c
-0000b6 d006
-0000b7 e091
-0000b8 d004
-0000b9 d03e
-0000ba e096
-0000bb d001
-0000bc 9508
-0000bd 2fe9
-0000be 7fe0
-0000bf b9eb
-0000c0 9829
-0000c1 9a28
-0000c2 d02d
-0000c3 9828
-0000c4 d02e
-0000c5 2fe9
-0000c6 95e2
-0000c7 7fe0
-0000c8 b9eb
-0000c9 9a28
-0000ca d025
-0000cb 9828
-0000cc d026
-0000cd 9508
-0000ce 2fe9
-0000cf 7fe0
-0000d0 b9eb
-0000d1 9a29
-0000d2 9a28
-0000d3 d01c
-0000d4 9828
-0000d5 d01d
-0000d6 2fe9
-0000d7 95e2
-0000d8 7fe0
-0000d9 b9eb
-0000da 9a28
-0000db d014
-0000dc 9828
-0000dd d015
-0000de 9508
-0000df 2f91
-0000e0 dfed
-0000e1 d01b
-0000e2 2f90
-0000e3 dfea
-0000e4 d018
-0000e5 2f93
-0000e6 dfe7
-0000e7 d015
-0000e8 2f92
-0000e9 dfe4
-0000ea d012
-0000eb e0cc
-0000ec d010
-0000ed 95ca
-0000ee f7e9
-0000ef 9508
-0000f0 0000
-0000f1 0000
-0000f2 9508
-0000f3 e54a
-0000f4 dffb
-0000f5 954a
-0000f6 f7e9
-0000f7 9508
-0000f8 e2d8
-0000f9 dff9
-0000fa 95da
-0000fb f7e9
-0000fc 9508
-0000fd ef4f
-0000fe efdf
-0000ff e1e4
-000100 95ea
-000101 f7f1
-000102 95da
-000103 f7d9
-000104 954a
-000105 f7c1
-000106 9508
-000107 0000                      	LCD
-                                 
-000108 e1a4
-000109 e0b2
-00010a 9160 0210
-00010c 9150 0211
-00010e 0f06
-00010f 1f15
-000110 9160 0212
-000112 9150 0213
-000114 0f26
-000115 1f35
-000116 e048
-000117 e06f
-000118 2362
-000119 917d
-00011a 918d
-00011b 2702
-00011c 2713
-00011d 2366
-00011e f039
-00011f 2f96
-000120 1f00
-000121 fb17
-000122 1f11
-000123 f900
-000124 959a
-000125 f7d1
-000126 0000
-000127 0f07
-000128 1f18
-000129 e06f
-00012a 2360
-00012b 917d
-00012c 918d
-00012d 2720
-00012e 2731
-00012f 2366
-000130 f039
-000131 2f96
-000132 1f22
-000133 fb37
-000134 1f33
-000135 f920
-000136 959a
-000137 f7d1
-000138 0000
-000139 0f27
-00013a 1f38
-00013b 954a
-00013c f6d1                      	RC5_ENCRYPT
-00013d ef9f
-00013e b99a
-00013f b994
-000140 9828
-000141 d04f
-000142 d002
-000143 d034
-000144 c05b
-000145 e393
-000146 d00f
-000147 d049
-000148 e392
-000149 d00c
-00014a d046
-00014b e298
-00014c d009
-00014d d043
-00014e e09c
-00014f d006
-000150 e091
-000151 d004
-000152 d03e
-000153 e096
-000154 d001
-000155 9508
-000156 2fe9
-000157 7fe0
-000158 b9eb
-000159 9829
-00015a 9a28
-00015b d02d
-00015c 9828
-00015d d02e
-00015e 2fe9
-00015f 95e2
-000160 7fe0
-000161 b9eb
-000162 9a28
-000163 d025
-000164 9828
-000165 d026
-000166 9508
-000167 2fe9
-000168 7fe0
-000169 b9eb
-00016a 9a29
-00016b 9a28
-00016c d01c
-00016d 9828
-00016e d01d
-00016f 2fe9
-000170 95e2
-000171 7fe0
-000172 b9eb
-000173 9a28
-000174 d014
-000175 9828
-000176 d015
+000086 9508
+000087 e54a
+000088 dffb
+000089 954a
+00008a f7e9
+00008b 9508
+00008c e2d8
+00008d dff9
+00008e 95da
+00008f f7e9
+000090 9508
+000091 ef4f
+000092 efdf
+000093 e1e4
+000094 95ea
+000095 f7f1
+000096 95da
+000097 f7d9
+000098 954a
+000099 f7c1
+00009a 9508
+00009b 0000                          lcd
+00009c e1e0
+00009d e0f2
+00009e ee01
+00009f eb17
+0000a0 8300
+0000a1 8311
+0000a2 e327
+0000a3 e93e
+0000a4 e141
+0000a5 9101
+0000a6 9111
+0000a7 0f02
+0000a8 1f13
+0000a9 8300
+0000aa 8311
+0000ab 954a
+0000ac f7c1
+0000ad e0c0
+0000ae e0d2
+0000af e1e0
+0000b0 e0f2
+0000b1 2400
+0000b2 2411
+0000b3 2422
+0000b4 2433
+0000b5 e396
+0000b6 0c02
+0000b7 1c13
+0000b8 8040
+0000b9 8051
+0000ba 0c04
+0000bb 1c15
+0000bc e063
+0000bd 9488
+0000be fc07
+0000bf 9408
+0000c0 1c11
+0000c1 1c00
+0000c2 956a
+0000c3 f7c9
+0000c4 8200
+0000c5 8211
+0000c6 0c20
+0000c7 1c31
+0000c8 2d62
+0000c9 706f
+0000ca 8048
+0000cb 8059
+0000cc 0c24
+0000cd 1c35
+0000ce 9488
+0000cf fc27
+0000d0 9408
+0000d1 1c33
+0000d2 1c22
+0000d3 956a
+0000d4 f7c9
+0000d5 8228
+0000d6 8239
+0000d7 95e3
+0000d8 95e3
+0000d9 e344
+0000da 13e4
+0000db c001
+0000dc e1e0
+0000dd 95c3
+0000de 95c3
+0000df e04c
+0000e0 13c4
+0000e1 c001
+0000e2 27cc
+0000e3 959a
+0000e4 f689                      	KEY_EXP
+0000e5 e8c0
+0000e6 e0d2
+0000e7 e0a0
+0000e8 e0b4
+0000e9 e091
+0000ea e1e0
+0000eb e0f2
+0000ec 9109
+0000ed 9119
+0000ee 9129
+0000ef 9139
+0000f0 9161
+0000f1 9171
+0000f2 0f06
+0000f3 1f17
+0000f4 9161
+0000f5 9171
+0000f6 0f26
+0000f7 1f37
+0000f8 e088
+0000f9 2702
+0000fa 2713
+0000fb 2f42
+0000fc 704f
+0000fd 9488
+0000fe fd07
+0000ff 9408
+000100 1f11
+000101 1f00
+000102 954a
+000103 f7c9
+000104 9161
+000105 9171
+000106 0f06
+000107 1f17
+000108 2720
+000109 2731
+00010a 2f40
+00010b 704f
+00010c 9488
+00010d fd27
+00010e 9408
+00010f 1f33
+000110 1f22
+000111 954a
+000112 f7c9
+000113 9161
+000114 9171
+000115 0f26
+000116 1f37
+000117 958a
+000118 f701
+000119 930d
+00011a 931d
+00011b 932d
+00011c 933d
+00011d 959a
+00011e f659                      	ENCRYPTION
+00011f ef9f
+000120 b99a
+000121 b994
+000122 9828
+000123 d04f
+000124 d002
+000125 d034
+000126 c05b
+000127 e393
+000128 d00f
+000129 d049
+00012a e392
+00012b d00c
+00012c d046
+00012d e298
+00012e d009
+00012f d043
+000130 e09c
+000131 d006
+000132 e091
+000133 d004
+000134 d03e
+000135 e096
+000136 d001
+000137 9508
+000138 2fe9
+000139 7fe0
+00013a b9eb
+00013b 9829
+00013c 9a28
+00013d d02d
+00013e 9828
+00013f d02e
+000140 2fe9
+000141 95e2
+000142 7fe0
+000143 b9eb
+000144 9a28
+000145 d025
+000146 9828
+000147 d026
+000148 9508
+000149 2fe9
+00014a 7fe0
+00014b b9eb
+00014c 9a29
+00014d 9a28
+00014e d01c
+00014f 9828
+000150 d01d
+000151 2fe9
+000152 95e2
+000153 7fe0
+000154 b9eb
+000155 9a28
+000156 d014
+000157 9828
+000158 d015
+000159 9508
+00015a 2f91
+00015b dfed
+00015c d01b
+00015d 2f90
+00015e dfea
+00015f d018
+000160 2f93
+000161 dfe7
+000162 d015
+000163 2f92
+000164 dfe4
+000165 d012
+000166 e0cc
+000167 d010
+000168 95ca
+000169 f7e9
+00016a 9508
+00016b 0000
+00016c 0000
+00016d 9508
+00016e e54a
+00016f dffb
+000170 954a
+000171 f7e9
+000172 9508
+000173 e2d8
+000174 dff9
+000175 95da
+000176 f7e9
 000177 9508
-000178 2f91
-000179 dfed
-00017a d01b
-00017b 2f90
-00017c dfea
-00017d d018
-00017e 2f93
-00017f dfe7
-000180 d015
-000181 2f92
-000182 dfe4
-000183 d012
-000184 e0cc
-000185 d010
-000186 95ca
-000187 f7e9
-000188 9508
-000189 0000
-00018a 0000
-00018b 9508
-00018c e54a
-00018d dffb
-00018e 954a
-00018f f7e9
-000190 9508
-000191 e2d8
-000192 dff9
-000193 95da
-000194 f7e9
-000195 9508
-000196 ef4f
-000197 efdf
-000198 e1e4
-000199 95ea
-00019a f7f1
-00019b 95da
-00019c f7d9
-00019d 954a
-00019e f7c1
-00019f 9508
-0001a0 0000                      	LCD
-                                 
-0001a1 e3a4
-0001a2 e0b2
-0001a3 e048
-0001a4 e06f
-0001a5 2360
-0001a6 917e
-0001a7 918e
-0001a8 1b28
-0001a9 0b37
-0001aa 2366
-0001ab f039
-0001ac 2f96
-0001ad 9537
-0001ae fb20
-0001af 9527
-0001b0 f937
-0001b1 959a
-0001b2 f7d1
-0001b3 0000
-0001b4 2720
-0001b5 2731
-0001b6 e06f
-0001b7 2362
-0001b8 917e
-0001b9 918e
-0001ba 1b08
-0001bb 0b17
-0001bc 2366
-0001bd f039
-0001be 2f96
-0001bf 9517
-0001c0 fb00
-0001c1 9507
-0001c2 f917
-0001c3 959a
-0001c4 f7d1
-0001c5 0000
-0001c6 2702
-0001c7 2713
-0001c8 954a
-0001c9 f6d1
-0001ca 9160 0211
-0001cc 9150 0210
-0001ce 1b05
-0001cf 0b16
-0001d0 9160 0213
-0001d2 9150 0212
-0001d4 1b25
-0001d5 0b36                      	RC5_DECRYPT
-0001d6 ef9f
-0001d7 b99a
-0001d8 b994
-0001d9 9828
-0001da d04f
-0001db d002
-0001dc d034
-0001dd c05b
-0001de e393
-0001df d00f
-0001e0 d049
-0001e1 e392
-0001e2 d00c
-0001e3 d046
-0001e4 e298
-0001e5 d009
-0001e6 d043
-0001e7 e09c
-0001e8 d006
-0001e9 e091
-0001ea d004
-0001eb d03e
-0001ec e096
-0001ed d001
-0001ee 9508
+000178 ef4f
+000179 efdf
+00017a e1e4
+00017b 95ea
+00017c f7f1
+00017d 95da
+00017e f7d9
+00017f 954a
+000180 f7c1
+000181 9508
+000182 0000                      	lcd
+000183 e0a0
+000184 e0b4
+000185 e0c0
+000186 e0d5
+000187 e091
+000188 e3e4
+000189 e0f2
+00018a e088
+00018b 910d
+00018c 911d
+00018d 912d
+00018e 913d
+00018f 9172
+000190 9162
+000191 1b26
+000192 0b37
+000193 2f40
+000194 704f
+000195 9488
+000196 fd30
+000197 9408
+000198 9527
+000199 9537
+00019a 954a
+00019b f7c9
+00019c 2720
+00019d 2731
+00019e 9172
+00019f 9162
+0001a0 1b06
+0001a1 0b17
+0001a2 2f42
+0001a3 704f
+0001a4 9488
+0001a5 fd10
+0001a6 9408
+0001a7 9507
+0001a8 9517
+0001a9 954a
+0001aa f7c9
+0001ab 2702
+0001ac 2713
+0001ad 958a
+0001ae f701
+0001af 9172
+0001b0 9162
+0001b1 1b26
+0001b2 0b37
+0001b3 9172
+0001b4 9162
+0001b5 1b06
+0001b6 0b17
+0001b7 9309
+0001b8 9319
+0001b9 9329
+0001ba 9339
+0001bb 959a
+0001bc f659                      	DECRYPTION
+0001bd ef9f
+0001be b99a
+0001bf b994
+0001c0 9828
+0001c1 d04f
+0001c2 d002
+0001c3 d034
+0001c4 c05b
+0001c5 e393
+0001c6 d00f
+0001c7 d049
+0001c8 e392
+0001c9 d00c
+0001ca d046
+0001cb e298
+0001cc d009
+0001cd d043
+0001ce e09c
+0001cf d006
+0001d0 e091
+0001d1 d004
+0001d2 d03e
+0001d3 e096
+0001d4 d001
+0001d5 9508
+0001d6 2fe9
+0001d7 7fe0
+0001d8 b9eb
+0001d9 9829
+0001da 9a28
+0001db d02d
+0001dc 9828
+0001dd d02e
+0001de 2fe9
+0001df 95e2
+0001e0 7fe0
+0001e1 b9eb
+0001e2 9a28
+0001e3 d025
+0001e4 9828
+0001e5 d026
+0001e6 9508
+0001e7 2fe9
+0001e8 7fe0
+0001e9 b9eb
+0001ea 9a29
+0001eb 9a28
+0001ec d01c
+0001ed 9828
+0001ee d01d
 0001ef 2fe9
-0001f0 7fe0
-0001f1 b9eb
-0001f2 9829
+0001f0 95e2
+0001f1 7fe0
+0001f2 b9eb
 0001f3 9a28
-0001f4 d02d
+0001f4 d014
 0001f5 9828
-0001f6 d02e
-0001f7 2fe9
-0001f8 95e2
-0001f9 7fe0
-0001fa b9eb
-0001fb 9a28
-0001fc d025
-0001fd 9828
-0001fe d026
-0001ff 9508
-000200 2fe9
-000201 7fe0
-000202 b9eb
-000203 9a29
-000204 9a28
-000205 d01c
-000206 9828
-000207 d01d
-000208 2fe9
-000209 95e2
-00020a 7fe0
-00020b b9eb
-00020c 9a28
-00020d d014
-00020e 9828
-00020f d015
+0001f6 d015
+0001f7 9508
+0001f8 2f91
+0001f9 dfed
+0001fa d01b
+0001fb 2f90
+0001fc dfea
+0001fd d018
+0001fe 2f93
+0001ff dfe7
+000200 d015
+000201 2f92
+000202 dfe4
+000203 d012
+000204 e0cc
+000205 d010
+000206 95ca
+000207 f7e9
+000208 9508
+000209 0000
+00020a 0000
+00020b 9508
+00020c e54a
+00020d dffb
+00020e 954a
+00020f f7e9
 000210 9508
-000211 2f91
-000212 dfed
-000213 d01b
-000214 2f90
-000215 dfea
-000216 d018
-000217 2f93
-000218 dfe7
-000219 d015
-00021a 2f92
-00021b dfe4
-00021c d012
-00021d e0cc
-00021e d010
-00021f 95ca
-000220 f7e9
-000221 9508
-000222 0000
-000223 0000
-000224 9508
-000225 e54a
-000226 dffb
-000227 954a
-000228 f7e9
-000229 9508
-00022a e2d8
-00022b dff9
-00022c 95da
-00022d f7e9
-00022e 9508
-00022f ef4f
-000230 efdf
-000231 e1e4
-000232 95ea
-000233 f7f1
-000234 95da
-000235 f7d9
-000236 954a
-000237 f7c1
-000238 9508
-000239 0000                      	LCD
-                                 
-                                 ; Test case: "MASS" as 0x4D41 and 0x5353
-00023a e41d
-00023b e401
-00023c e533
-00023d e523                      	INPUT 0x4D41, 0x5353
-00023e ef9f
-00023f b99a
-000240 b994
-000241 9828
-000242 d04f
-000243 d002
-000244 d034
-000245 c05b
-000246 e393
-000247 d00f
-000248 d049
-000249 e392
-00024a d00c
-00024b d046
-00024c e298
-00024d d009
-00024e d043
-00024f e09c
-000250 d006
-000251 e091
-000252 d004
-000253 d03e
-000254 e096
-000255 d001
-000256 9508
-000257 2fe9
-000258 7fe0
-000259 b9eb
-00025a 9829
-00025b 9a28
-00025c d02d
-00025d 9828
-00025e d02e
-00025f 2fe9
-000260 95e2
-000261 7fe0
-000262 b9eb
-000263 9a28
-000264 d025
-000265 9828
-000266 d026
-000267 9508
-000268 2fe9
-000269 7fe0
-00026a b9eb
-00026b 9a29
-00026c 9a28
-00026d d01c
-00026e 9828
-00026f d01d
-000270 2fe9
-000271 95e2
-000272 7fe0
-000273 b9eb
-000274 9a28
-000275 d014
-000276 9828
-000277 d015
-000278 9508
-000279 2f91
-00027a dfed
-00027b d01b
-00027c 2f90
-00027d dfea
-00027e d018
-00027f 2f93
-000280 dfe7
-000281 d015
-000282 2f92
-000283 dfe4
-000284 d012
-000285 e0cc
-000286 d010
-000287 95ca
-000288 f7e9
-000289 9508
-00028a 0000
-00028b 0000
-00028c 9508
-00028d e54a
-00028e dffb
-00028f 954a
-000290 f7e9
-000291 9508
-000292 e2d8
-000293 dff9
-000294 95da
-000295 f7e9
-000296 9508
-000297 ef4f
-000298 efdf
-000299 e1e4
-00029a 95ea
-00029b f7f1
-00029c 95da
-00029d f7d9
-00029e 954a
-00029f f7c1
-0002a0 9508
-0002a1 0000                      	LCD
-                                 
-0002a2 e1a4
-0002a3 e0b2
-0002a4 9160 0210
-0002a6 9150 0211
-0002a8 0f06
-0002a9 1f15
-0002aa 9160 0212
-0002ac 9150 0213
-0002ae 0f26
-0002af 1f35
-0002b0 e048
-0002b1 e06f
-0002b2 2362
-0002b3 917d
-0002b4 918d
-0002b5 2702
-0002b6 2713
-0002b7 2366
-0002b8 f039
-0002b9 2f96
-0002ba 1f00
-0002bb fb17
-0002bc 1f11
-0002bd f900
-0002be 959a
-0002bf f7d1
-0002c0 0000
-0002c1 0f07
-0002c2 1f18
-0002c3 e06f
-0002c4 2360
-0002c5 917d
-0002c6 918d
-0002c7 2720
-0002c8 2731
-0002c9 2366
-0002ca f039
-0002cb 2f96
-0002cc 1f22
-0002cd fb37
-0002ce 1f33
-0002cf f920
-0002d0 959a
-0002d1 f7d1
-0002d2 0000
-0002d3 0f27
-0002d4 1f38
-0002d5 954a
-0002d6 f6d1                      	RC5_ENCRYPT
-0002d7 ef9f
-0002d8 b99a
-0002d9 b994
-0002da 9828
-0002db d04f
-0002dc d002
-0002dd d034
-0002de c05b
-0002df e393
-0002e0 d00f
-0002e1 d049
-0002e2 e392
-0002e3 d00c
-0002e4 d046
-0002e5 e298
-0002e6 d009
-0002e7 d043
-0002e8 e09c
-0002e9 d006
-0002ea e091
-0002eb d004
-0002ec d03e
-0002ed e096
-0002ee d001
-0002ef 9508
-0002f0 2fe9
-0002f1 7fe0
-0002f2 b9eb
-0002f3 9829
-0002f4 9a28
-0002f5 d02d
-0002f6 9828
-0002f7 d02e
-0002f8 2fe9
-0002f9 95e2
-0002fa 7fe0
-0002fb b9eb
-0002fc 9a28
-0002fd d025
-0002fe 9828
-0002ff d026
-000300 9508
-000301 2fe9
-000302 7fe0
-000303 b9eb
-000304 9a29
-000305 9a28
-000306 d01c
-000307 9828
-000308 d01d
-000309 2fe9
-00030a 95e2
-00030b 7fe0
-00030c b9eb
-00030d 9a28
-00030e d014
-00030f 9828
-000310 d015
-000311 9508
-000312 2f91
-000313 dfed
-000314 d01b
-000315 2f90
-000316 dfea
-000317 d018
-000318 2f93
-000319 dfe7
-00031a d015
-00031b 2f92
-00031c dfe4
-00031d d012
-00031e e0cc
-00031f d010
-000320 95ca
-000321 f7e9
-000322 9508
-000323 0000
-000324 0000
-000325 9508
-000326 e54a
-000327 dffb
-000328 954a
-000329 f7e9
-00032a 9508
-00032b e2d8
-00032c dff9
-00032d 95da
-00032e f7e9
-00032f 9508
-000330 ef4f
-000331 efdf
-000332 e1e4
-000333 95ea
-000334 f7f1
-000335 95da
-000336 f7d9
-000337 954a
-000338 f7c1
-000339 9508
-00033a 0000                      	LCD
-                                 
-00033b e3a4
-00033c e0b2
-00033d e048
-00033e e06f
-00033f 2360
-000340 917e
-000341 918e
-000342 1b28
-000343 0b37
-000344 2366
-000345 f039
-000346 2f96
-000347 9537
-000348 fb20
-000349 9527
-00034a f937
-00034b 959a
-00034c f7d1
-00034d 0000
-00034e 2720
-00034f 2731
-000350 e06f
-000351 2362
-000352 917e
-000353 918e
-000354 1b08
-000355 0b17
-000356 2366
-000357 f039
-000358 2f96
-000359 9517
-00035a fb00
-00035b 9507
-00035c f917
-00035d 959a
-00035e f7d1
-00035f 0000
-000360 2702
-000361 2713
-000362 954a
-000363 f6d1
-000364 9160 0211
-000366 9150 0210
-000368 1b05
-000369 0b16
-00036a 9160 0213
-00036c 9150 0212
-00036e 1b25
-00036f 0b36                      	RC5_DECRYPT
-000370 ef9f
-000371 b99a
-000372 b994
-000373 9828
-000374 d04f
-000375 d002
-000376 d034
-000377 c05b
-000378 e393
-000379 d00f
-00037a d049
-00037b e392
-00037c d00c
-00037d d046
-00037e e298
-00037f d009
-000380 d043
-000381 e09c
-000382 d006
-000383 e091
-000384 d004
-000385 d03e
-000386 e096
-000387 d001
-000388 9508
-000389 2fe9
-00038a 7fe0
-00038b b9eb
-00038c 9829
-00038d 9a28
-00038e d02d
-00038f 9828
-000390 d02e
-000391 2fe9
-000392 95e2
-000393 7fe0
-000394 b9eb
-000395 9a28
-000396 d025
-000397 9828
-000398 d026
-000399 9508
-00039a 2fe9
-00039b 7fe0
-00039c b9eb
-00039d 9a29
-00039e 9a28
-00039f d01c
-0003a0 9828
-0003a1 d01d
-0003a2 2fe9
-0003a3 95e2
-0003a4 7fe0
-0003a5 b9eb
-0003a6 9a28
-0003a7 d014
-0003a8 9828
-0003a9 d015
-0003aa 9508
-0003ab 2f91
-0003ac dfed
-0003ad d01b
-0003ae 2f90
-0003af dfea
-0003b0 d018
-0003b1 2f93
-0003b2 dfe7
-0003b3 d015
-0003b4 2f92
-0003b5 dfe4
-0003b6 d012
-0003b7 e0cc
-0003b8 d010
-0003b9 95ca
-0003ba f7e9
-0003bb 9508
-0003bc 0000
-0003bd 0000
-0003be 9508
-0003bf e54a
-0003c0 dffb
-0003c1 954a
-0003c2 f7e9
-0003c3 9508
-0003c4 e2d8
-0003c5 dff9
-0003c6 95da
-0003c7 f7e9
-0003c8 9508
-0003c9 ef4f
-0003ca efdf
-0003cb e1e4
-0003cc 95ea
-0003cd f7f1
-0003ce 95da
-0003cf f7d9
-0003d0 954a
-0003d1 f7c1
-0003d2 9508
-0003d3 0000                      	LCD
-                                 
-                                 end_f: 
-0003d4 cfff                      	 RJMP  end_f
-                                 
-                                 	 I_RESET:
-0003d5 95e3                              inc ZL
-0003d6 95e3                              inc ZL
-0003d7 e354                              ldi R21, 0x34
-0003d8 13e5                              cpse ZL, R21
-0003d9 9508                              ret    
-0003da e1e0                              ldi ZL, low(S0L)
-0003db 9508                              ret
-                                 
-                                 
-                                 J_RESET:
-0003dc 95c3                              inc YL
-0003dd 95c3                              inc YL
-0003de e05c                              ldi R21, 0x0C
-0003df 13c5                              cpse YL, R21
-0003e0 9508                              ret
-0003e1 e2c0                              LDI YL, low(0x0220)   ; reset Y pointer to start of L-array
+000211 e2d8
+000212 dff9
+000213 95da
+000214 f7e9
+000215 9508
+000216 ef4f
+000217 efdf
+000218 e1e4
+000219 95ea
+00021a f7f1
+00021b 95da
+00021c f7d9
+00021d 954a
+00021e f7c1
+00021f 9508
+000220 0000                      	lcd
 
 
 RESOURCE USE INFORMATION
@@ -2444,40 +1907,40 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATmega328P" register use summary:
-x  :  16 y  :   4 z  :   8 r0 :  19 r1 :  19 r2 :   8 r3 :   7 r4 :   0 
-r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  36 r17:  32 r18:  36 r19:  32 r20:  65 
-r21:  24 r22:  59 r23:  23 r24:  23 r25: 122 r26:   4 r27:   4 r28:  17 
-r29:  25 r30: 102 r31:   2 
-Registers used: 23 out of 35 (65.7%)
+x  :   8 y  :  12 z  :  26 r0 :   7 r1 :   6 r2 :   8 r3 :   6 r4 :   4 
+r5 :   4 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
+r13:   0 r14:   0 r15:   0 r16:  58 r17:  24 r18:  23 r19:  21 r20:  30 
+r21:   0 r22:  21 r23:  16 r24:   4 r25:  57 r26:   2 r27:   2 r28:  13 
+r29:  15 r30:  56 r31:   4 
+Registers used: 24 out of 35 (68.6%)
 
 "ATmega328P" instruction use summary:
-.lds  :   0 .sts  :   0 adc   :  13 add   :  13 adiw  :   0 and   :   8 
-andi  :  25 asr   :   0 bclr  :   0 bld   :  10 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :  10 brge  :   0 brhc  :   0 
+.lds  :   0 .sts  :   0 adc   :   9 add   :   9 adiw  :   0 and   :   0 
+andi  :  17 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :   0 brge  :   0 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
-brne  :  52 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
-brvs  :   0 bset  :   0 bst   :  10 call  :   0 cbi   :  36 cbr   :   0 
-clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   4 cls   :   0 
+brne  :  30 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
+brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :  18 cbr   :   0 
+clc   :   6 clh   :   0 cli   :   0 cln   :   0 clr   :   5 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
-cpi   :   0 cpse  :   2 dec   :  52 eor   :  16 fmul  :   0 fmuls :   0 
+cpi   :   0 cpse  :   2 dec   :  30 eor   :   8 fmul  :   0 fmuls :   0 
 fmulsu:   0 icall :   0 ijmp  :   0 in    :   0 inc   :   4 jmp   :   0 
-ld    :  20 ldd   :   2 ldi   : 137 lds   :  28 lpm   :   0 lsl   :   0 
-lsr   :   0 mov   :  59 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
-neg   :   0 nop   :  28 or    :   0 ori   :   0 out   :  38 pop   :   0 
-push  :   0 rcall : 194 ret   :  52 reti  :   0 rjmp  :   7 rol   :  12 
-ror   :   8 sbc   :   8 sbci  :   0 sbi   :  30 sbic  :   0 sbis  :   0 
-sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0 
+ld    :  28 ldd   :   2 ldi   :  87 lds   :   4 lpm   :   0 lsl   :   0 
+lsr   :   0 mov   :  29 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
+neg   :   0 nop   :   9 or    :   0 ori   :   0 out   :  18 pop   :   0 
+push  :   0 rcall :  96 ret   :  24 reti  :   0 rjmp  :   6 rol   :   8 
+ror   :   4 sbc   :   4 sbci  :   0 sbi   :  15 sbic  :   0 sbis  :   0 
+sbiw  :   0 sbr   :   0 sbrc  :   6 sbrs  :   0 sec   :   6 seh   :   0 
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
-sez   :   0 sleep :   0 spm   :   0 st    :   3 std   :   3 sts   :  26 
-sub   :   8 subi  :   1 swap  :  12 tst   :  10 wdr   :   0 
-Instructions used: 35 out of 113 (31.0%)
+sez   :   0 sleep :   0 spm   :   0 st    :  12 std   :   4 sts   :  16 
+sub   :   4 subi  :   0 swap  :   6 tst   :   0 wdr   :   0 
+Instructions used: 32 out of 113 (28.3%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x0007c6   1990      0   1990   32768   6.1%
+[.cseg] 0x000000 0x000444   1092      0   1092   32768   3.3%
 [.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 
-Assembly complete, 0 errors, 8 warnings
+Assembly complete, 0 errors, 0 warnings
